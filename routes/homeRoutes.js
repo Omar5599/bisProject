@@ -29,7 +29,7 @@ const storage = multer.diskStorage({
 
 router.get('/api/gender/:gender',homeController.gender);
 router.get('/api/category/:category',homeController.category);
-router.get('/api/products',homeController.allProducts);
+router.get('/api/products/',homeController.allProducts);
 router.get('/api/product/', homeController.getProductById );
 router.delete('/api/product/', homeController.deleteProduct );
 router.patch('/api/products/', upload.single("image"), homeController.updateProduct);
